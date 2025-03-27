@@ -9,7 +9,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe())
   app.use(cookireParser())
-  app.enableCors({origin:"http://localhost:3000",credentials:true})
+  app.enableCors({origin:"https://ghor-khujo.vercel.app",credentials:true})
   await app.listen(process.env.PORT ?? 4000);
 }
 bootstrap();
